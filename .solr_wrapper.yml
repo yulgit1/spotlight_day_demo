@@ -1,0 +1,7 @@
+# Place any default configuration for solr_wrapper here
+# port: 8983
+collection:
+  dir: solr/config
+  name: spotlight_day_demo
+  
+instance_directory: tmp/solr
