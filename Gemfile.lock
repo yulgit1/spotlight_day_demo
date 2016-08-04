@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/projectblacklight/spotlight.git
-  revision: 30d0cb646647e1296c09b8dc778b6864df5125c0
+  revision: 0ae522fd8dcd57514c8733e953545187a45b3c5c
   specs:
-    blacklight-spotlight (0.20.3)
-      acts-as-taggable-on (~> 3.5)
+    blacklight-spotlight (0.23.0)
+      acts-as-taggable-on (>= 4.0.0.pre)
       autoprefixer-rails
       blacklight (~> 6.3)
       blacklight-gallery (>= 0.3.0)
@@ -13,11 +13,12 @@ GIT
       cancancan
       carrierwave
       carrierwave-crop
+      clipboard-rails (~> 1.5)
       devise (>= 3.0)
       devise_invitable (~> 1.6)
       faraday
       faraday_middleware
-      friendly_id (~> 5.1.0)
+      friendly_id (>= 5.2.0.beta.1, < 6)
       github-markup
       legato
       lodash-rails
@@ -26,11 +27,10 @@ GIT
       oauth2
       openseadragon
       paper_trail (~> 5.0)
-      rails (~> 4.0, >= 4.2.0)
+      rails (>= 4.2.0, < 6)
       roar-rails
       signet
       sir_trevor_rails (~> 0.5)
-      social-share-button (~> 0.3)
       tophat
       underscore-rails (~> 1.6)
 
@@ -72,11 +72,11 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    acts-as-taggable-on (3.5.0)
-      activerecord (>= 3.2, < 5)
+    acts-as-taggable-on (4.0.0)
+      activerecord (>= 4.0)
     addressable (2.4.0)
     arel (6.0.3)
-    autoprefixer-rails (6.3.7)
+    autoprefixer-rails (6.4.0)
       execjs
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
@@ -124,6 +124,7 @@ GEM
       carrierwave (>= 0.8.0, < 0.11.0)
       jquery-rails
       rails (>= 3.2)
+    clipboard-rails (1.5.10)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -143,9 +144,9 @@ GEM
       warden (~> 1.2.3)
     devise-guests (0.5.0)
       devise
-    devise_invitable (1.6.0)
-      actionmailer (>= 3.2.6)
-      devise (>= 3.2.0)
+    devise_invitable (1.7.0)
+      actionmailer (>= 4.0.0)
+      devise (>= 4.0.0)
     diff-lcs (1.2.5)
     diffy (3.1.0)
     erubis (2.7.0)
@@ -154,7 +155,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.10.0)
       faraday (>= 0.7.4, < 0.10)
-    friendly_id (5.1.0)
+    friendly_id (5.2.0.beta.1)
       activerecord (>= 4.0.0)
     github-markup (1.4.0)
     globalid (0.3.7)
@@ -198,7 +199,7 @@ GEM
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (>= 1.2, < 3)
-    openseadragon (0.2.1)
+    openseadragon (0.3.0)
       rails (> 3.2.0)
     orm_adapter (0.5.0)
     paper_trail (5.2.0)
@@ -206,6 +207,7 @@ GEM
       activesupport (>= 3.0, < 6.0)
       request_store (~> 1.1)
     pkg-config (1.1.7)
+    puma (3.6.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -297,10 +299,7 @@ GEM
       twitter-text (~> 1.4)
     sitemap_generator (5.1.0)
       builder
-    social-share-button (0.3.1)
-      coffee-rails
-      sass-rails
-    solr_wrapper (0.14.2)
+    solr_wrapper (0.15.0)
       faraday
       ruby-progressbar
       rubyzip
@@ -321,7 +320,7 @@ GEM
     tilt (2.0.5)
     tophat (2.3.0)
       actionpack (>= 3.0.0)
-    turbolinks (5.0.0)
+    turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
     twitter-text (1.14.0)
@@ -366,6 +365,7 @@ DEPENDENCIES
   friendly_id
   jbuilder (~> 2.0)
   jquery-rails
+  puma (~> 3.0)
   rails (= 4.2.7)
   riiif (~> 0.4.0)
   rsolr (~> 1.0)
@@ -373,7 +373,6 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   sitemap_generator
-  social-share-button
   solr_wrapper (>= 0.3)
   spring
   sqlite3
