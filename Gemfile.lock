@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/projectblacklight/spotlight.git
-  revision: 0ae522fd8dcd57514c8733e953545187a45b3c5c
+  revision: 13dc5f132a52c080b3924e03eb4d9671362641bf
   specs:
-    blacklight-spotlight (0.23.0)
+    blacklight-spotlight (0.24.0)
       acts-as-taggable-on (>= 4.0.0.pre)
       autoprefixer-rails
       blacklight (~> 6.3)
@@ -21,7 +21,6 @@ GIT
       friendly_id (>= 5.2.0.beta.1, < 6)
       github-markup
       legato
-      lodash-rails
       mini_magick
       nokogiri
       oauth2
@@ -76,7 +75,7 @@ GEM
       activerecord (>= 4.0)
     addressable (2.4.0)
     arel (6.0.3)
-    autoprefixer-rails (6.4.0)
+    autoprefixer-rails (6.4.0.1)
       execjs
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
@@ -175,8 +174,6 @@ GEM
       activesupport (>= 3.0.0)
     legato (0.7.0)
       multi_json
-    lodash-rails (4.14.1)
-      railties (>= 3.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
