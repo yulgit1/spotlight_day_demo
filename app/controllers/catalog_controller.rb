@@ -31,6 +31,25 @@ class CatalogController < ApplicationController
 
     config.add_sort_field 'relevance', sort: 'score desc', label: 'Relevance'
 
+    config.add_index_field 'creator_ssim', label: 'Creator'
+    config.add_index_field 'subject_ssim', label: 'Subject'
+    config.add_index_field 'description_tesim', label: 'Item Description'
+
     config.add_field_configuration_to_solr_request!
   end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 end
