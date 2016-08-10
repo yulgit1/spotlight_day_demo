@@ -3,7 +3,7 @@ class DplaResourcesController < ApplicationController
   before_action :build_resource
   def create
     if @resource.save_and_index
-      redirect_to spotlight.admin_exhibit_catalog_index_path(current_exhibit)
+      redirect_to spotlight.admin_exhibit_catalog_path(current_exhibit)
     else
       render 'edit'
     end
