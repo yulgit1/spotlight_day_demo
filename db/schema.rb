@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160730174160) do
+ActiveRecord::Schema.define(version: 20160811135557) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.integer  "user_id",       null: false
@@ -223,6 +223,8 @@ ActiveRecord::Schema.define(version: 20160730174160) do
     t.datetime "updated_at"
     t.binary   "metadata"
     t.integer  "index_status"
+    t.text     "query"
+    t.integer  "rows"
   end
 
   add_index "spotlight_resources", ["index_status"], name: "index_spotlight_resources_on_index_status"

@@ -32,15 +32,17 @@ class CatalogController < ApplicationController
     config.add_sort_field 'relevance', sort: 'score desc', label: 'Relevance'
 
     config.add_field_configuration_to_solr_request!
-          config.add_facet_fields_to_solr_request!
+          #config.add_facet_fields_to_solr_request!
 
-          config.add_index_field 'creator_ssim', label: 'Creator'
-          config.add_index_field 'subject_ssim', label: 'Subject'
-          config.add_index_field 'description_tesim', label: 'Description'
-    config.add_facet_field 'creator_ssim', label: 'Creator'
-    config.add_facet_field 'subject_ssim', label: 'Subject'
+          #config.add_index_field 'creator_ssim', label: 'Creator'
+          #config.add_index_field 'subject_ssim', label: 'Subject'
+          #config.add_index_field 'description_tesim', label: 'Description'
+    #config.add_facet_field 'creator_ssim', label: 'Creator'
+    #config.add_facet_field 'subject_ssim', label: 'Subject'
     #config.add_facet_field 'description_tesim', lable: 'Description'
-
+    config.add_facet_fields_to_solr_request!
+    config.add_index_field 'full_title_tsim',label: 'Title'
+    config.add_index_field 'creator_tsim', label: 'Creator'
 
   end
 end

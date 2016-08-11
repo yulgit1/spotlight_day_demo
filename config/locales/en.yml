@@ -25,3 +25,10 @@ en:
     form:
       title: "DPLA Query String"
       add_item: "Ingest It"
+  yul_resources:
+    form:
+      title: "Ingest from existing solr repo"
+      add_item: "Ingest It"
+      url: "URL"
+      query: "Query"
+      rows: "Rows"

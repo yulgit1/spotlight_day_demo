@@ -15,7 +15,8 @@
 #   'spotlight/resources/csv_upload/form',
 #   'spotlight/resources/json_upload/form'
 # ]
-Spotlight::Engine.config.external_resources_partials = ["dpla_resources/form"]
+#Spotlight::Engine.config.external_resources_partials = ["dpla_resources/form"]
+Spotlight::Engine.config.external_resources_partials = ["yul_resources/form"]
 # Spotlight::Engine.config.default_browse_index_view_type = :gallery
 # Spotlight::Engine.config.default_contact_email = nil
 

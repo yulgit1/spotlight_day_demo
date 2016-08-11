@@ -82,7 +82,7 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   resources :exhibits, only: [] do
-    resources :dpla_resources, only: [:create, :update] do
+    resources :yul_resources, only: [:create, :update] do
     end
   end
 end
